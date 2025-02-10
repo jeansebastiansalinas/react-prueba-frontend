@@ -1,0 +1,1122 @@
+/* 🎯 Estilos generales */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* 🌍 Contenedor del logo */
+.logo-container {
+  width: 150px;
+  height: 50px;
+  background-image: url("../assets/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* 📌 Header dentro del Hero */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 15px 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: transparent;
+}
+
+/* 🏞 Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-image: url("../assets/header.png");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding-top: 120px;
+}
+
+.hero-title {
+  font-size: 50px;
+  font-weight: bold;
+  letter-spacing: 8px;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 30px;
+  color: #eeb96b;
+  letter-spacing: 6px;
+  margin-top: 5px;
+}
+
+/* 🛠 🔹 Menú de Navegación */
+.nav {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: rgb(90, 90, 90);
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+/* 📱 Menú hamburguesa en móviles */
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.mobile-menu .nav-link {
+  color: white;
+  padding: 10px 0;
+}
+
+/* 🎭 Contenedor de tarjetas */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px; /* 🔥 Más espacio entre tarjetas */
+  justify-content: center;
+  margin-top: 50px;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* 📦 Tarjetas */
+.card {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  border-radius: 15px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  transition: transform 0.3s ease-in-out;
+  border: 12px solid rgba(204, 203, 203, 0.6);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+  transform: scale(1.04);
+}
+
+/* 🖼 Imágenes de las tarjetas */
+.card-1 { background-image: url("../assets/viajes_grupales.png"); }
+.card-2 { background-image: url("../assets/viajes_a_la_medida.png"); }
+.card-3 { background-image: url("../assets/destinos_para_parejas.png"); }
+
+/* 🔲 Overlay de las tarjetas */
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+/* 📝 Texto dentro de la franja */
+.card-text {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* 🔼 Ícono de flecha */
+.card-overlay::after {
+  content: "➜";
+  font-size: 16px;
+  color: white;
+  margin-left: 10px;
+}
+
+/* 🛠 🔹 MEDIA QUERIES - RESPONSIVE */
+
+/* 📏 Dispositivos medianos (tablets y pantallas medianas) */
+@media (max-width: 1024px) {
+  .header {
+    padding: 10px 20px;
+  }
+
+  .nav {
+    gap: 20px;
+  }
+
+  .hero-title {
+    font-size: 42px;
+    letter-spacing: 6px;
+  }
+
+  .hero-subtitle {
+    font-size: 26px;
+    letter-spacing: 4px;
+  }
+
+  .card-container {
+    gap: 25px;
+  }
+}
+
+/* 📱 Dispositivos pequeños (móviles) */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 15px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .hero {
+    height: 80vh;
+    padding-top: 100px;
+  }
+
+  .hero-title {
+    font-size: 34px;
+    letter-spacing: 5px;
+  }
+
+  .hero-subtitle {
+    font-size: 24px;
+    letter-spacing: 3px;
+  }
+
+  .card-container {
+    gap: 20px;
+  }
+
+  .card {
+    height: 180px;
+  }
+}
+
+/* 🖥 Pantallas muy pequeñas (móviles compactos) */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 26px;
+    letter-spacing: 3px;
+  }
+
+  .hero-subtitle {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+
+  .card {
+    height: 150px;
+  }
+}
+
+
+/* Sección "Nosotros" */
+.about-section {
+  text-align: center;
+  padding: 50px 20px;
+  color: #4a4a4a;
+}
+
+.about-title {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  color: #c89b4b;
+}
+
+.about-text {
+  max-width: 800px;
+  margin: 20px auto; /* Ahora está completamente centrado */
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify; /* Mantiene el texto justificado */
+  padding: 0 20px; /* Asegura que haya margen en los lados en móviles */
+}
+
+.separator {
+  width: 50%;
+  height: 1px;
+  background-color: #c89b4b;
+  margin: 40px auto 0;
+}
+
+/* Galería de imágenes */
+.about-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+  margin-left: 110px;
+  flex-wrap: wrap; /* Permite que las imágenes se acomoden en pantallas pequeñas */
+}
+
+.about-card {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+}
+
+.about-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-username {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #c89b4b;
+}
+
+.instagram-logo {
+  width: 30px;
+  height: 30px;
+  background-image: url("../assets/icono_mail.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 10px; /* Ajustado para evitar excesivo espacio */
+}
+
+/* Ajustes específicos para pantallas más pequeñas */
+@media (max-width: 1024px) {
+  .about-text {
+    padding: 0 40px;
+  }
+
+  .about-gallery {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-text {
+    text-align: center; /* Centra el texto en pantallas pequeñas */
+  }
+
+  .about-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-card {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text {
+    font-size: 14px;
+    padding: 0 20px;
+  }
+
+  .about-card {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+
+
+
+
+/* Sección "Experiencias" */
+.experiences-section {
+  text-align: center;
+  padding: 50px 20px;
+  color: #4a4a4a;
+}
+
+.experiences-title {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  color: #c89b4b;
+}
+
+.experiences-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* Asegura que todas las tarjetas sean del mismo alto */
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.experience-card {
+  position: relative;
+  width: 300px; /* Mantiene el tamaño original */
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%; /* Asegura que todas las tarjetas tengan la misma altura */
+}
+
+.experience-info {
+  padding: 15px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Distribuye el espacio equitativamente */
+}
+
+
+
+/* Imagen como fondo */
+.experience-image {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0; /* Evita que la imagen se reduzca */
+}
+
+.experience-card-1 .experience-image { background-image: url("../assets/exp_grupales_1.png"); }
+.experience-card-2 .experience-image { background-image: url("../assets/exp_grupales_2.png"); }
+.experience-card-3 .experience-image { background-image: url("../assets/exp_grupales_3.png"); }
+
+/* Etiqueta de disponibilidad */
+.experience-tag {
+  background-color: #c89b4b;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 15px;
+  text-align: center;
+}
+
+.experience-card-2 .experience-tag { background-color: red; }
+.experience-card-3 .experience-tag { background-color: green; }
+
+
+
+.experience-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #4a4a4a;
+}
+
+.experience-dates {
+  font-size: 14px;
+  color: #c89b4b;
+  margin: 5px 0;
+}
+
+.experience-description {
+  font-size: 14px;
+  color: #4a4a4a;
+  line-height: 1.4;
+  flex-grow: 1; /* Expande la descripción para igualar alturas */
+}
+
+.experience-button {
+  display: block;
+  width: 100%;
+  background-color: #c89b4b;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 0 0 15px 15px;
+  margin-top: auto; /* Empuja el botón hacia abajo */
+}
+
+
+.experience-button:hover {
+  background-color: #a57f3b;
+}
+
+
+
+
+/* Contenedor principal para posicionar las flechas */
+.experiences-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Botones de navegación (Flechas) */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Flecha izquierda */
+.prev {
+  left: 50px; /* Ajusta la posición */
+}
+
+/* Flecha derecha */
+.next {
+  right: 50px; /* Ajusta la posición */
+}
+
+
+
+/* Nueva Sección */
+.different-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.different-title {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  color: #c89b4b;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.different-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.different-image {
+  width: 350px;
+  height: 350px;
+  border-radius: 15px;
+  background-image: url("../assets/exp_personalizadas.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.different-info {
+  max-width: 500px;
+  text-align: left;
+}
+
+.different-subtitle {
+  font-size: 22px;
+  font-weight: bold;
+  color: #2d2d2d;
+  margin-bottom: 15px;
+}
+
+.different-description {
+  font-size: 15px;
+  color: #4a4a4a;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.different-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #c89b4b;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.different-button:hover {
+  background-color: #a57f3b;
+}
+
+
+
+
+/* Sección Blogs */
+.blogs-section {
+  background-color: #c89b4b;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.blogs-title {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.blogs-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Tarjetas de Blog */
+.blog-card {
+  background-color: white;
+  border-radius: 15px;
+  width: 350px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Primera tarjeta (más grande) */
+.blog-card-1 {
+  height: 450px;
+}
+
+/* Contenedor para las tarjetas 2 y 3 */
+.blog-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 450px;
+  justify-content: space-between;
+}
+
+/* Tarjetas 2 y 3 (comparten la misma altura que la primera tarjeta) */
+.blog-card-2,
+.blog-card-3 {
+  height: 215px; /* La mitad de la primera tarjeta con espacio entre ellas */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Imagen de las tarjetas */
+.blog-image {
+  width: 100%;
+  height: 60%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Agregar imágenes desde CSS */
+.blog-card-1 .blog-image {
+  background-image: url("../assets/exp_personalizadas.png");
+}
+
+.blog-card-2 .blog-image {
+  background-image: url("../assets/blogs_2.png");
+}
+
+.blog-card-3 .blog-image {
+  background-image: url("../assets/blogs_3.png");
+}
+
+.blog-info {
+  padding: 15px;
+  text-align: left;
+}
+
+.blog-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #2d2d2d;
+  margin-bottom: 10px;
+}
+
+.blog-description {
+  font-size: 14px;
+  color: #4a4a4a;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.blog-link {
+  font-size: 14px;
+  font-weight: bold;
+  color: #c89b4b;
+  text-decoration: none;
+}
+
+.blog-link:hover {
+  text-decoration: underline;
+}
+
+/* Sección Formulario */
+.form-section {
+  background-color: #f3f3f3;
+  padding: 50px 10%;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Títulos */
+.form-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #c89b4b;
+  margin-bottom: 10px;
+}
+
+.form-subtitle {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  max-width: 800px;
+  margin: 20px 0; /* Elimina el centrado automático */
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify; /* Justifica el texto */
+  padding-left: 90px; /* Ajusta según necesites */
+  
+}
+
+.form-description {
+  max-width: 800px;
+  margin: 20px 0; /* Elimina el centrado automático */
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify; /* Justifica el texto */
+  padding-left: 90px; /* Ajusta según necesites */
+  color: #525151;
+}
+
+/* Contenedor del Formulario */
+.form-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Filas del formulario */
+.form-row {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.form-group {
+  flex: 1;
+  text-align: left;
+}
+
+/* Etiquetas */
+label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Inputs, Selects y Textarea */
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Opciones de Experiencia */
+.experience-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.experience-options button {
+  background-color: white;
+  border: 1px solid white;
+  color: #747474;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.experience-options button:hover {
+  background-color: white;
+  color: rgb(145, 145, 145);
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* Radio Buttons */
+.radio-options {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Botón de Enviar */
+.form-button {
+  background-color: #c89b4b;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  width: 200px;
+  text-transform: uppercase;
+  transition: 0.3s;
+  margin: 20px auto 0;
+  display: block;
+}
+
+.form-button:hover {
+  background-color: #b3863b;
+}
+
+
+
+.alliances-section {
+  background-color: #fff;
+  padding: 40px 0;
+  text-align: center;
+  position: relative;
+}
+
+.alliances-title {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 16px; /* Aumenté el espaciado */
+  color: #c89b4b;
+  text-align: center;
+  margin-bottom: 30px;
+  text-transform: uppercase; /* Asegura que el texto esté en mayúsculas */
+}
+
+.alliances-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 120px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Imágenes de logos importadas desde CSS */
+.avianca {
+  background-image: url("../assets/logo1.png");
+}
+.expedia {
+  background-image: url("../assets/logo2.png");
+}
+.uber {
+  background-image: url("../assets/logo3.png");
+}
+.lifemiles {
+  background-image: url("../assets/logo4.png");
+}
+.bancolombia {
+  background-image: url("../assets/logo5.png");
+}
+.riu {
+  background-image: url("../assets/logo6.png");
+}
+.royalcaribbean {
+  background-image: url("../assets/logo7.png");
+}
+
+/* Icono de WhatsApp en la esquina derecha */
+.whatsapp-icon {
+  position: absolute;
+  top: 0%; /* Ajusta este valor para subir más el icono */
+  right: 20px;
+  width: 75px; /* Aumenta el tamaño */
+  height: 75px; /* Aumenta el tamaño */
+  background-image: url("../assets/logo_WA.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translateY(-50%);
+}
+
+
+
+/* Estilo de la sección del newsletter */
+.newsletter-section {
+  background-color: #171c2a; /* Color de fondo */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Texto de la invitación a suscribirse */
+.newsletter-text {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Contenedor del formulario */
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Campo de entrada de email */
+.newsletter-input {
+  width: 100%;
+  max-width: 550px;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  background-color: white;
+  color: #7a7a7a;
+}
+
+/* Botón de suscripción */
+.newsletter-button {
+  background-color: #c89b4b;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.newsletter-button:hover {
+  background-color: #b5863a;
+}
+
+
+/* Estilos generales del footer */
+.footer {
+  background-color: white;
+  padding: 40px 20px;
+}
+
+/* Contenedor principal */
+.footer-container {
+  display: flex;
+  justify-content: start;  /* Alinea los elementos hacia la izquierda */
+  align-items: start;
+  gap: 80px; /* Se redujo un poco la separación */
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Permite que los elementos se acomoden en pantallas pequeñas */
+}
+
+/* Contenedor izquierdo (Logo y Redes Sociales) */
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo {
+  width: 150px;
+  height: 60px;
+  background-image: url("../assets/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer-socials {
+  width: 180px;
+  height: 45px;
+  margin-top: 10px;
+  background-image: url("../assets/image.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Contenedor derecho (Navegación y Contacto) */
+.footer-right {
+  display: flex;
+  gap: 60px; /* Espaciado entre navegación y contacto */
+  flex-wrap: wrap; /* Asegura que se acomode en móviles */
+}
+
+/* Navegación */
+.footer-navigation {
+  margin-right: 20px; /* Se redujo el margen */
+}
+
+.footer-navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-navigation li {
+  margin-bottom: 6px;
+  color: #333;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Contacto */
+.footer-contact {
+  color: #333;
+  font-size: 14px;
+}
+
+.footer-contact p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.email { background-image: url("../assets/icono_mail.png"); }
+.phone { background-image: url("../assets/icono_telefono.png"); }
+.location { background-image: url("../assets/icono_ubicacion.png"); }
+
+/* 📏 Media Queries para Responsividad */
+
+/* 🌍 Tablets y pantallas medianas */
+@media (max-width: 1024px) {
+  .footer-container {
+    gap: 40px;
+    justify-content: center; /* Centra los elementos en pantallas medianas */
+  }
+
+  .footer-right {
+    gap: 40px;
+  }
+}
+
+/* 📱 Móviles */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .footer-right {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer-navigation {
+    margin-right: 0;
+  }
+
+  .footer-contact p {
+    justify-content: center;
+  }
+}
+
+/* 📏 Dispositivos muy pequeños */
+@media (max-width: 480px) {
+  .footer-logo {
+    width: 120px;
+    height: 50px;
+  }
+
+  .footer-socials {
+    width: 150px;
+    height: 40px;
+  }
+
+  .footer-navigation li,
+  .footer-contact {
+    font-size: 12px;
+  }
+
+  .icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+  }
+}
