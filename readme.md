@@ -25,7 +25,7 @@ Antes de instalar, asegúrate de tener instalado:
 ## 📥 Instalación del proyecto
 
 ### **1️⃣ Clonar el repositorio**
-git clone https://github.com/jeansebastiansalinas/frontend-prueba
+git clone https://github.com/jeansebastiansalinas/react-prueba-frontend
 
 
 
