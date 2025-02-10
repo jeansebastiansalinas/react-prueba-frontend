@@ -25,9 +25,8 @@ Antes de instalar, asegúrate de tener instalado:
 ## 📥 Instalación del proyecto
 
 ### **1️⃣ Clonar el repositorio**
-```bash
-git clone https://github.com/tu-usuario/tu-repo.git
-cd tu-repo
+git clone https://github.com/jeansebastiansalinas/frontend-prueba
+
 
 
 2️⃣ Configurar el Backend 
